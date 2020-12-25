@@ -43,9 +43,9 @@ class GradientDecentEngine:
 
         for pair in pairs:
             self.equations.append(
-                [{Equation.oyv: pair["y"], Equation.inter: self.intercept, Equation.sl: self.slope, Equation.x: pair["x"]}])
+                {Equation.oyv: pair["y"], Equation.inter: self.intercept, Equation.sl: self.slope, Equation.x: pair["x"]})
 
-        print(self.equations)
+        print(self.equations[0][Equation.oyv])
 
     def loss(self):
         print("hello World")
