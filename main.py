@@ -34,19 +34,24 @@ class GradientDecentEngine:
         self.intercept = random.randint(0, 5)
         pairs = []
 
-        xls = df[self.x]
-        yls = df[self.y]
-
         # Finds X, Y pairs in data
 
-        for i in range(xls.value_counts()):
-            pairs.append([{"x": xls[i], "y": yls[i]}])
+        for i in range(len(df[self.x])):
+            pairs.append({"x": df[self.x][i], "y": df[self.y][i]})
 
         # Generates Equation
 
         for pair in pairs:
             self.equations.append(
-                [{Equation.oyv: pair["y"], Equation.inter: self.intercept, Equation.sl: self.slope, Equation.x: pair["x"], }])
+                [{Equation.oyv: pair["y"], Equation.inter: self.intercept, Equation.sl: self.slope, Equation.x: pair["x"]}])
+
+        print(self.equations)
 
     def loss(self):
         print("hello World")
+
+
+eng = GradientDecentEngine(0.1, 1000, "example.csv", Variable.intercept,
+                           0.64, 0, "Years Experience", "Previous employers")
+
+eng.generateEquations()
