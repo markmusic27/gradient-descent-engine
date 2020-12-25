@@ -8,6 +8,13 @@ class Variable(enum.Enum):
     slope = 1
 
 
+class Equation(enum.Enum):
+    oyv = 0
+    inter = 1
+    sl = 2
+    x = 3
+
+
 class GradientDecentEngine:
     equations = []
 
@@ -37,8 +44,9 @@ class GradientDecentEngine:
 
         # Generates Equation
 
-        for i in pairs:
-            print(pairs)
+        for pair in pairs:
+            self.equations.append(
+                [{Equation.oyv: pair["y"], Equation.inter: self.intercept, Equation.sl: self.slope, Equation.x: pair["x"], }])
 
     def loss(self):
         print("hello World")
