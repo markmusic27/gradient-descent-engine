@@ -3,11 +3,6 @@ import enum
 import pandas as pd
 
 
-class Variable(enum.Enum):
-    intercept = 0
-    slope = 1
-
-
 class Equation(enum.Enum):
     oyv = 0
     inter = 1
@@ -18,11 +13,9 @@ class Equation(enum.Enum):
 class GradientDecentEngine:
     equations = []
 
-    def __init__(self, learning_rate, loops, dataset, variable, slope, intercept, x, y):
+    def __init__(self, learning_rate, dataset, slope, intercept, x, y):
         self.learning_rate = learning_rate
-        self.loops = loops
         self.dataset = dataset
-        self.variable = variable
         self.intercept = intercept
         self.slope = slope
         self.x = x
@@ -31,7 +24,7 @@ class GradientDecentEngine:
     def generate(self):
         # Initializes Dataset / Declares Variables
         df = pd.read_csv(self.dataset)
-        self.intercept = random.randint(0, 100)
+        self.intercept = 0
         pairs = []
 
         # Finds X, Y pairs in data
@@ -48,16 +41,17 @@ class GradientDecentEngine:
     def train(self):
         eq = self.equations[0]
         sl = 0
-        for _ in range(self.loops):
+        for _ in range(40):
             sl = eq[Equation.sl] * eq[Equation.x]
             sl = self.intercept + sl
             sl = eq[Equation.oyv] - sl
-            sl = sl * 2
+            sl = sl * -2
 
-        print(sl)
+            ss = sl * self.learning_rate
+            self.intercept = self.intercept - ss
 
 
-eng = GradientDecentEngine(0.1, 1000, "example.csv", Variable.intercept,
+eng = GradientDecentEngine(0.1, "example.csv",
                            0.64, 0, "Years Experience", "Previous employers")
 
 eng.generate()
