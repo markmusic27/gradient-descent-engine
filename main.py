@@ -28,10 +28,10 @@ class GradientDecentEngine:
         self.x = x
         self.y = y
 
-    def generateEquations(self):
+    def generate(self):
         # Initializes Dataset / Declares Variables
         df = pd.read_csv(self.dataset)
-        self.intercept = random.randint(0, 5)
+        self.intercept = random.randint(0, 100)
         pairs = []
 
         # Finds X, Y pairs in data
@@ -45,13 +45,21 @@ class GradientDecentEngine:
             self.equations.append(
                 {Equation.oyv: pair["y"], Equation.inter: self.intercept, Equation.sl: self.slope, Equation.x: pair["x"]})
 
-        print(self.equations[0][Equation.oyv])
+    def train(self):
+        eq = self.equations[0]
+        sl = 0
+        for _ in range(self.loops):
+            sl = eq[Equation.sl] * eq[Equation.x]
+            sl = self.intercept + sl
+            sl = eq[Equation.oyv] - sl
+            sl = sl * 2
 
-    def loss(self):
-        print("hello World")
+        print(sl)
 
 
 eng = GradientDecentEngine(0.1, 1000, "example.csv", Variable.intercept,
                            0.64, 0, "Years Experience", "Previous employers")
 
-eng.generateEquations()
+eng.generate()
+
+eng.train()
