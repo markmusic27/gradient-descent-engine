@@ -29,7 +29,7 @@ def generate(self):
                 {Equation.oyv: pair["y"], Equation.inter: self.intercept, Equation.sl: self.slope, Equation.x: pair["x"]})
 ```
 
-This is no where near complete and is just a fraction and small piece of what you can do with Gradient Decent. Feel free to submit issues or pull request! Contributions are welcome.
+This is no where near complete and is just a fraction of what you can do with Gradient Decent. Feel free to submit issues or pull request! Contributions are welcome.
 
 Made with ❤️ by __[@markmusic2727](https://twitter.com/MarkMusic2727)__
 

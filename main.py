@@ -22,17 +22,12 @@ class GradientDecentEngine:
         self.y = y
 
     def generate(self):
-        # Initializes Dataset / Declares Variables
         df = pd.read_csv(self.dataset)
         self.intercept = 0
         pairs = []
 
-        # Finds X, Y pairs in data
-
         for i in range(len(df[self.x])):
             pairs.append({"x": df[self.x][i], "y": df[self.y][i]})
-
-        # Generates Equation
 
         for pair in pairs:
             self.equations.append(
