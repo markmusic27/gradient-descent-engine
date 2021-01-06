@@ -6,7 +6,7 @@ Gradient descent is an optimization algorithm used to minimize some function by 
 
 ## Gradient Decent
 
-___
+---
 
 ### __Example:__
 
