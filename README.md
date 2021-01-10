@@ -1,6 +1,6 @@
 <img src="https://i.ibb.co/zS1g2ww/header.png" />
 
-# Gradient Decent Engine
+<h1 align="center"> <b>Gradient Decent Engine</b><br>
 
 ## Structure
 
