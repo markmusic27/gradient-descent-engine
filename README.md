@@ -4,6 +4,11 @@
 
 <p align="center">
         <img src="https://github.com/alii/use-last-fm/workflows/CI/badge.svg" />
+        <img src="https://img.shields.io/github/issues/markmusic2727/gradient_decent_engine" />
+        <img src="https://img.shields.io/github/forks/markmusic2727/gradient_decent_engine" />
+        <img src="https://img.shields.io/github/stars/markmusic2727/gradient_decent_engine" />
+        <img src="https://img.shields.io/github/license/markmusic2727/gradient_decent_engine" />
+        <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fmarkmusic2727%2Fgradient_decent_engine" />
 </p>
 
 ## Structure
