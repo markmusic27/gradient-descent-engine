@@ -1,9 +1,10 @@
 <img src="https://i.ibb.co/zS1g2ww/header.png" />
 
-<h1 align="center"> <b>Gradient Decent Engine</b>
-<br/>
-<img src="https://github.com/alii/use-last-fm/workflows/CI/badge.svg" />
-</h1>
+<h1 align="center"> <b>Gradient Decent Engine</b></h1>
+
+<p align="center">
+        <img src="https://github.com/alii/use-last-fm/workflows/CI/badge.svg" />
+</p>
 
 ## Structure
 
