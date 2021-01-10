@@ -6,6 +6,8 @@ Gradient descent is an optimization algorithm used to minimize some function by 
 
 ## Gradient Decent
 
+What makes gradient decent great is the ability that it has to use one fundemental algorithm that can be applied to a number of different regressions and models. These includes linear regression (optimizing the intercept & slope), logistic regression (optimizing squiggle), t-SNE (optimizing clusters), and much more! 
+
 ---
 
 ### __Example:__
