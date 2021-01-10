@@ -13,6 +13,10 @@ Gradient descent is an optimization algorithm used to minimize some function by 
 
 What makes gradient decent great is the ability that it has to use one fundemental algorithm that can be applied to a number of different regressions and models. These includes linear regression (optimizing the intercept & slope), logistic regression (optimizing squiggle), t-SNE (optimizing clusters), and much more! It works by taking steps that get closer to the optimal value. What makes it so efficient is the way that it does this. The farther away from the optimal value, the larger the steps. When it gets closer, the steps will become smaller.
 
+### __Example:__
+
+<img src="https://i.ibb.co/BgYL2Cr/gradient-example.png" height="300px" />
+
 ## Algorithm Snippet
 
 Here's a small snippet of the algorithm that loads the essential values that are then used to train the engine.
